@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37cfa7cf5b86450b9b62e379f188a1ba" Name="Diagram1" ZoomLevel="99">
+        <EntityTypeShape EntityType="IrisModel.ADMINISTRATOR" Width="1.5" PointX="5.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrisModel.IMAGE" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IrisModel.PERSON" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="IrisModel.FK__PERSON__PersonID__49C3F6B7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

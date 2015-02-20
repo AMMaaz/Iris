@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IrisModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="IrisModelStoreContainer">
+    <EntitySet Name="ADMINISTRATOR" EntityType="IrisModel.Store.ADMINISTRATOR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IMAGES" EntityType="IrisModel.Store.IMAGES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PERSON" EntityType="IrisModel.Store.PERSON" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__PERSON__PersonID__49C3F6B7" Association="IrisModel.Store.FK__PERSON__PersonID__49C3F6B7">
+      <End Role="IMAGES" EntitySet="IMAGES" />
+      <End Role="PERSON" EntitySet="PERSON" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ADMINISTRATOR">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="int" Nullable="false" />
+    <Property Name="AdminFname" Type="nchar" Nullable="false" MaxLength="15" />
+    <Property Name="AdminLname" Type="nchar" MaxLength="15" />
+    <Property Name="DoB" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nchar" MaxLength="20" />
+    <Property Name="Password" Type="nchar" MaxLength="20" />
+    <Property Name="E-mail" Type="nchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="IMAGES">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="int" Nullable="false" />
+    <Property Name="ImageName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Image" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonFname" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="PersonLname" Type="varchar" MaxLength="15" />
+    <Property Name="DoB" Type="date" Nullable="false" />
+    <Property Name="CNIC" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Sex" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Photo" Type="image" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__PERSON__PersonID__49C3F6B7">
+    <End Role="IMAGES" Type="IrisModel.Store.IMAGES" Multiplicity="1" />
+    <End Role="PERSON" Type="IrisModel.Store.PERSON" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IMAGES">
+        <PropertyRef Name="ImageID" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

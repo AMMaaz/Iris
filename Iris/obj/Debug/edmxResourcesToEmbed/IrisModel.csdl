@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IrisModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IrisEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMINISTRATORs" EntityType="IrisModel.ADMINISTRATOR" />
+    <EntitySet Name="IMAGES" EntityType="IrisModel.IMAGE" />
+    <EntitySet Name="People" EntityType="IrisModel.PERSON" />
+    <AssociationSet Name="FK__PERSON__PersonID__49C3F6B7" Association="IrisModel.FK__PERSON__PersonID__49C3F6B7">
+      <End Role="IMAGES" EntitySet="IMAGES" />
+      <End Role="PERSON" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ADMINISTRATOR">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="Int32" Nullable="false" />
+    <Property Name="AdminFname" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="true" />
+    <Property Name="AdminLname" Type="String" MaxLength="15" Unicode="true" FixedLength="true" />
+    <Property Name="DoB" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="Password" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="E_mail" Type="String" MaxLength="30" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="IMAGE">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="Int32" Nullable="false" />
+    <Property Name="ImageName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Image1" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="PERSON" Relationship="IrisModel.FK__PERSON__PersonID__49C3F6B7" FromRole="IMAGES" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonFname" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="PersonLname" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="DoB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CNIC" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Sex" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Photo" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="IMAGE" Relationship="IrisModel.FK__PERSON__PersonID__49C3F6B7" FromRole="PERSON" ToRole="IMAGES" />
+  </EntityType>
+  <Association Name="FK__PERSON__PersonID__49C3F6B7">
+    <End Role="IMAGES" Type="IrisModel.IMAGE" Multiplicity="1" />
+    <End Role="PERSON" Type="IrisModel.PERSON" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IMAGES">
+        <PropertyRef Name="ImageID" />
+      </Principal>
+      <Dependent Role="PERSON">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

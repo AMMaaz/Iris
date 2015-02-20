@@ -1,0 +1,18 @@
+c:\users\anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\Iris.exe.config
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\Iris.exe
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\Iris.pdb
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.csprojResolveAssemblyReference.cache
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.Properties.Resources.resources
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.csproj.GenerateResource.Cache
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.exe
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.pdb
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.MainForm.resources
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.LoginForm.resources
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\obj\Debug\Iris.AddUserForm.resources
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\Iris.mdf
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\Iris_log.ldf
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\EntityFramework.dll
+C:\Users\Anwar\documents\visual studio 2012\Projects\Iris\Iris\bin\Debug\EntityFramework.xml
+C:\Users\Maaz\Desktop\Desktop\Iris\Iris\bin\Debug\Iris.exe.config
+C:\Users\Maaz\Desktop\Desktop\Iris\Iris\obj\Debug\Iris.exe
+C:\Users\Maaz\Desktop\Desktop\Iris\Iris\obj\Debug\Iris.pdb

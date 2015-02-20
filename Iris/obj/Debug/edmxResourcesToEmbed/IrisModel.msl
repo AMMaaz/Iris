@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IrisModelStoreContainer" CdmEntityContainer="IrisEntities">
+    <EntitySetMapping Name="ADMINISTRATORs">
+      <EntityTypeMapping TypeName="IrisModel.ADMINISTRATOR">
+        <MappingFragment StoreEntitySet="ADMINISTRATOR">
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="AdminFname" ColumnName="AdminFname" />
+          <ScalarProperty Name="AdminLname" ColumnName="AdminLname" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMAGES">
+      <EntityTypeMapping TypeName="IrisModel.IMAGE">
+        <MappingFragment StoreEntitySet="IMAGES">
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Image1" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IrisModel.PERSON">
+        <MappingFragment StoreEntitySet="PERSON">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="PersonFname" ColumnName="PersonFname" />
+          <ScalarProperty Name="PersonLname" ColumnName="PersonLname" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
